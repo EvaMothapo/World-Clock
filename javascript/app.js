@@ -15,6 +15,14 @@ function updateTime() {
 
   sydneyDateElement.innerHTML = sydneyTime.format("Do MMM  YYYY");
   sydneyTimeElement.innerHTML = `${sydneyTime.format("h:mm:ss [<small>]A[</small>]")} `;
+
+  let santiagoElement = document.querySelector("#santiago");
+  let santiagoDateElement = santiagoElement.querySelector(".date");
+  let santiagoTimeElement = santiagoElement.querySelector(".time");
+  let santiagoTime = moment().tz("America/Santiago");
+
+  santiagoDateElement.innerHTML = santiagoTime.format("Do MMM  YYYY");
+  santiagoTimeElement.innerHTML = `${santiagoTime.format("h:mm:ss [<small>]A[</small>]")} `;
 }
 updateTime();
 setInterval(updateTime, 1000);
